@@ -89,29 +89,37 @@
       mode = "n";
       key = "<C-h>";
       action = "<C-w>h"; 
-      options.remap = true;
-      options.desc = "Go to Left Window";
+      options = {
+        remap = true;
+        desc = "Go to Left Window";
+      };
     }
     {
       mode = "n";
       key = "<C-j>";
       action = "<C-w>j";
-      options.remap = true;
-      options.desc = "Go to Lower Window";
+      options = {
+        remap = true;
+        desc = "Go to Lower Window";
+      };
     }
     {
       mode = "n";
       key = "<C-k>";
       action = "<C-w>k";
-      options.remap = true;
-      options.desc = "Go to Upper Window";
+      options = {
+        remap = true;
+        desc = "Go to Upper Window";
+      };
     }
     {
       mode = "n";
       key = "<C-l>";
       action = "<C-w>l";
-      options.remap = true;
-      options.desc = "Go to Right Window";
+      options = {
+        remap = true;
+        desc = "Go to Right Window";
+      };
     }
     
     # Swap Lines

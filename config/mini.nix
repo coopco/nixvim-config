@@ -5,6 +5,9 @@
       ai = { };
       comment = { };
       pairs = { };
+      splitjoin = { };
+      bracketed = { };
+      align = { };
     };
   };
 }

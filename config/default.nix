@@ -13,12 +13,14 @@
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
-    #./neogit.nix
     ./neo-tree.nix
+    #./neogit.nix
+    ./obsidian.nix
+    ./options.nix
     ./persistence.nix
     ./slime.nix
-    ./spectre.nix
     ./snippets.nix
+    ./spectre.nix
     ./telescope.nix
     ./todo-comments.nix
     ./treesitter.nix
@@ -26,7 +28,12 @@
     ./which-key.nix
   ];
   colorschemes.catppuccin.enable = true;
-  globals.mapleader = " ";
+  globals = {
+    mapleader = " ";
+    maplocalleader = "\\";  # ??
+    #autoformat = true;
+    trouble_lualine = true;
+  };
   viAlias = true;
   clipboard.providers.xclip.enable = true;
 

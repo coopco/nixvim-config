@@ -55,6 +55,7 @@
 
     wrap = false;  # Disable line wrap
 
-    foldmethod = "indent";
+    foldmethod = "syntax";
+    foldlevel = 99;  # Default fold level on open
   };
 }

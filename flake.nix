@@ -28,7 +28,7 @@
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
               # inherit (inputs) foo;
-            };
+            } // import ./utils;
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in

@@ -4,7 +4,6 @@
     ./bufferline.nix
     ./conform.nix
     ./coq.nix
-    ./dressing.nix
     ./fidget.nix
     ./flash.nix
     ./gitsigns.nix

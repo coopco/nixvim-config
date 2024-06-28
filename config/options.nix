@@ -15,6 +15,8 @@
     ignorecase = true;  # Ignore case
     inccommand = "nosplit";  # Preview incremental substitute
 
+    jumpoptions = "view";  # Acoid scrolling when switching buffers
+
     laststatus = 3;  # global statusline
     linebreak = true;  # Wrap lines
     list = true;  # Show some invisible characters (e.g. tabs)

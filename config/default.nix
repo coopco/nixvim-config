@@ -14,6 +14,7 @@
     ./lualine.nix
     ./mini.nix
     ./neo-tree.nix
+    ./noice.nix
     #./neogit.nix
     ./obsidian.nix
     ./options.nix

@@ -386,7 +386,7 @@
     }
     {
       mode = "n";
-      key = "<leader>w-";
+      key = "<leader>wj";
       action = "<C-W>s";
       options = {
         remap = true;
@@ -395,7 +395,7 @@
     }
     {
       mode = "n";
-      key = "<leader>w|";
+      key = "<leader>wl";
       action = "<C-W>v";
       options = {
         remap = true;

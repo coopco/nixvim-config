@@ -44,9 +44,9 @@
     signcolumn = "yes";  # Always show sign column
 
     termguicolors = true;
- 
+
     timeoutlen = 300;  # Lower than default for which-key
- 
+
     undofile = true;  # Persistent undo
     undolevels = 10000;
 

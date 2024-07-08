@@ -12,6 +12,7 @@
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
+    ./misc.nix  # Miscellaneous plugins
     ./neo-tree.nix
     ./noice.nix
     #./neogit.nix

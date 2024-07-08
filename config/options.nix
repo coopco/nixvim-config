@@ -42,11 +42,11 @@
 
     showmode = false;  # Made redundant by statusline
     signcolumn = "yes";  # Always show sign column
-    
+
     termguicolors = true;
-    
+
     timeoutlen = 300;  # Lower than default for which-key
-    
+
     undofile = true;  # Persistent undo
     undolevels = 10000;
 
@@ -57,7 +57,7 @@
 
     wrap = false;  # Disable line wrap
 
-    foldmethod = "syntax";
+    foldmethod = "indent";
     foldlevel = 99;  # Default fold level on open
   };
 }

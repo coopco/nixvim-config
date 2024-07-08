@@ -15,7 +15,7 @@
     ./misc.nix  # Miscellaneous plugins
     ./neo-tree.nix
     ./noice.nix
-    #./neogit.nix
+    ./neogit.nix
     ./obsidian.nix
     ./options.nix
     ./persistence.nix

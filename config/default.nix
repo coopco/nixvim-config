@@ -68,8 +68,8 @@
     {
       mode = "n";
       key = "<leader>bb";
-      action = "<cmd>bnext<cr>";
-      options.desc = "Next Buffer";
+      action = "<cmd>b#<cr>";
+      options.desc = "Last Buffer";
     }
     {
       mode = "n";

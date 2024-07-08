@@ -25,7 +25,7 @@
       let b:slime_config["x_window_pid"] = trim(slime#common#system("xdotool getwindowpid " .. b:slime_config["x_window_id"], []))
       let b:slime_config["listen_on"] = "unix:/tmp/mykitty-" .. b:slime_config["x_window_pid"]
       let b:slime_config["window_id"] = trim(slime#common#system("kitty @ --to " .. b:slime_config["listen_on"] .. " ls | jq '.[] | select(.platform_window_id == " .. b:slime_config["x_window_id"] .. ").tabs[0].windows[0].id'", []))
-    
+
     endfunction
   '';
 }

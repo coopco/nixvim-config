@@ -24,7 +24,7 @@
     mouse = "a";  # Mouse mode
 
     pumblend = 10;  # Popup menu transparency
-    pumheight = 0;  # Maximum popup menu items
+    pumheight = 10;  # Maximum popup menu items
 
     scrolloff = 4;  # Mimimal number of lines to keep above/below cursor
     sidescrolloff = 8;  # Columns
@@ -44,9 +44,9 @@
     signcolumn = "yes";  # Always show sign column
 
     termguicolors = true;
-
+ 
     timeoutlen = 300;  # Lower than default for which-key
-
+ 
     undofile = true;  # Persistent undo
     undolevels = 10000;
 

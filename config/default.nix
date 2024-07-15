@@ -11,6 +11,7 @@
     ./gitsigns.nix
     ./headlines.nix
     ./indent-blankline.nix
+    ./latex.nix
     ./lean.nix
     ./lsp.nix
     ./lualine.nix

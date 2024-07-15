@@ -25,8 +25,8 @@
           __raw = ''
             cmp.config.sources({
               { name = 'nvim_lsp' },
-              { name = 'vsnip' },
-              -- { name = 'luasnip' },
+              { name = 'latex_symbols' },
+              { name = 'luasnip' },
               -- { name = 'ultisnips' },
               -- { name = 'snippy' },
             }, {
@@ -37,6 +37,9 @@
       };
     };
     cmp-nvim-lsp = {
+      enable = true;
+    };
+    cmp_luasnip = {
       enable = true;
     };
   };

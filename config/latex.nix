@@ -1,0 +1,7 @@
+{
+  plugins = {
+    vimtex = {
+      enable = true;
+    };
+  };
+}

@@ -16,6 +16,7 @@ in {
 
     # Files
     (mkKeymap "n" "<leader>fb" "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>" "Buffers")
+    (mkKeymap "n" "<leader>B" "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>" "Buffers")
     (mkKeymap "n" "<leader>ff" "<cmd>Telescope find_files<cr>" "Files")
     (mkKeymap "n" "<leader>fg" "<cmd>Telescope git_files<cr>" "Git Files")
     (mkKeymap "n" "<leader>fr" "<cmd>Telescope oldfiles<cr>" "Recent Files")
@@ -45,3 +46,19 @@ in {
     (mkKeymap "n" "<leader>sS" "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>" "Goto Symbol (Workspace)")
   ];
 }
+#  {
+#    "neovim/nvim-lspconfig",
+#    opts = function()
+#      if LazyVim.pick.want() ~= "telescope" then
+#        return
+#      end
+#      local Keys = require("lazyvim.plugins.lsp.keymaps").get()
+#      -- stylua: ignore
+#      vim.list_extend(Keys, {
+#        { "gd", function() require("telescope.builtin").lsp_definitions({ reuse_win = true }) end, desc = "Goto Definition", has = "definition" },
+#        { "gr", "<cmd>Telescope lsp_references<cr>", desc = "References", nowait = true },
+#        { "gI", function() require("telescope.builtin").lsp_implementations({ reuse_win = true }) end, desc = "Goto Implementation" },
+#        { "gy", function() require("telescope.builtin").lsp_type_definitions({ reuse_win = true }) end, desc = "Goto T[y]pe Definition" },
+#      })
+#    end,
+#  },

@@ -1,4 +1,5 @@
 {
+  # TODO: different files for each lang
   plugins.lsp = {
     enable = true;
     servers = {
@@ -6,6 +7,7 @@
       ruff-lsp.enable = true;
       pyright.enable = true;
       nixd.enable = true;
+      zls.enable = true;
     };
   };
   plugins.lint.enable = true;

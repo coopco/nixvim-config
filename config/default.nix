@@ -10,6 +10,7 @@
     ./gitsigns.nix
     ./headlines.nix
     ./indent-blankline.nix
+    ./lean.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix

@@ -3,7 +3,8 @@
   imports = [ 
     ./bufferline.nix
     ./conform.nix
-    ./coq.nix  # Completion engine
+    #./coq.nix  # Completion engine
+    ./cmp.nix  # Completion engine
     ./dap.nix  # Debug Adapter Protocol
     ./fidget.nix
     ./flash.nix

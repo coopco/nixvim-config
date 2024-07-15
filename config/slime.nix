@@ -1,3 +1,6 @@
+# TODO: launch terminal if not already open
+# TODO: launch ipython if not already open
+# TODO: treesittre motions
 {
   plugins.vim-slime = {
     enable = true;
@@ -6,11 +9,16 @@
       python_ipython = 1;
       default_config = {
         window_id = "1";
-	listen_on = "unix:/tmp/mykitty";
+	      listen_on = "unix:/tmp/mykitty";
       };
     };
   };
   extraConfigVim = ''
+    let g:slime_no_mappings = 1
+    nmap <c-c>v <Plug>SlimeConfig
+
+    set operatorfunc=slime#send_op
+
     function SlimeOverrideConfig()
       let b:slime_config = {}
       if !exists("b:slime_config")
@@ -28,4 +36,26 @@
 
     endfunction
   '';
+  keymaps = [
+    # Buffers
+    # TODO: how to not rely on operatorfunc?
+    {
+      mode = "n";
+      key = "<C-cr>";
+      action = "0g@}}";
+      options.desc = "Slime send paragraph";
+    }
+    {
+      mode = "x";
+      key = "<C-cr>";
+      action = "<Plug>SlimeRegionSend<cr>";
+      options.desc = "Slime send selection";
+    }
+    {
+      mode = "n";
+      key = "<S-cr>";
+      action = "0g@jj";
+      options.desc = "Slime send current line";
+    }
+  ];
 }

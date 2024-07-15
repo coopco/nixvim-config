@@ -11,13 +11,86 @@ in {
         hash = "sha256-BQj0oozhWfrMwaYIIcsCokAactWMQTLNnyhaR1EkICY=";
       };
     })
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "actions-preview";
+      src = pkgs.fetchFromGitHub {
+        owner = "aznhe21";
+        repo = "actions-preview.nvim";
+        rev = "9f52a01c374318e91337697ebed51c6fae57f8a4";
+        hash = "sha256-lYjsv8y1fMuTGpBF/iG7cm/a7tLdh748vJhVsSp/Iz8=";
+      };
+    })
+    # TODO: previews with lsp not really working
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "goto-preview";
+      src = pkgs.fetchFromGitHub {
+        owner = "rmagatti";
+        repo = "goto-preview";
+        rev = "1519ea3512828c944eed5b2bbb66a8f8deb92447";
+        hash = "sha256-TyTijbaRUJjrVy3+fjR5WgRA30dNvawElFiOUb9HhuI=";
+      };
+    })
+    #(pkgs.vimUtils.buildVimPlugin {
+    #  name = "kitty-runner";
+    #  src = pkgs.fetchFromGitHub {
+    #    owner = "jghauser";
+    #    repo = "kitty-runner.nvim";
+    #    rev = "1d254d70696d87bc9c3842191b6e837e2b97edb6";
+    #    hash = "sha256-z/azRo96gjCu0Cbb96gaHdb9b1UStsSrOu0hp56EfTM=";
+    #  };
+    #})
   ];
   keymaps = [
+    # Pretty diagnostics
     (mkKeymap
       "n"
       "<leader>dl"
       "<cmd>lua toggle_diagnostics_and_virtualtext()<cr>"
       "Toggle single line diagnostics"
+    )
+    # actions-preview
+    (mkKeymap
+      [ "n" "v" ]
+      "<leader>pa"
+      "<cmd>lua require('actions-preview').code_actions()<CR>"
+      "Preview code actions"
+    )
+    # goto-preview
+    (mkKeymap
+      "n"
+      "<leader>pd"
+      "<cmd>lua require('goto-preview').goto_preview_definition()<CR>"
+      "Preview definition"
+    )
+    (mkKeymap
+      "n"
+      "<leader>pt"
+      "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>"
+      "Preview type definition"
+    )
+    (mkKeymap
+      "n"
+      "<leader>pi"
+      "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>"
+      "Preview implementation"
+    )
+    (mkKeymap
+      "n"
+      "<leader>pD"
+      "<cmd>lua require('goto-preview').goto_preview_declaration()<CR>"
+      "Preview declaration"
+    )
+    (mkKeymap
+      "n"
+      "<leader>pc"
+      "<cmd>lua require('goto-preview').close_all_win()<CR>"
+      "Close all previews"
+    )
+    (mkKeymap
+      "n"
+      "<leader>pr"
+      "<cmd>lua require('goto-preview').goto_preview_references()<CR>"
+      "Preview references"
     )
   ];
   extraConfigLua = ''

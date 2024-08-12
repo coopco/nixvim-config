@@ -7,6 +7,7 @@
         pre_select = true;
       };
       auto_start = true;
+      display.pum.y_max_len = 5;
     };
   };
 }

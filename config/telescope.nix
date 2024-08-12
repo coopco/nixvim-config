@@ -12,11 +12,12 @@ in {
   keymaps = [
     (mkKeymap "n" "<leader>/" "<cmd>Telescope live_grep<cr>" "Search Live Grep")
     (mkKeymap "v" "<leader>/" "<cmd>Telescope live_grep<cr>" "Search Live Grep")
-    (mkKeymap "n" "<leader><space>" "<cmd>Telescope find_files<cr>" "Find Files")
+    #(mkKeymap "n" "<leader><space>" "<cmd>Telescope find_files<cr>" "Find Files")
 
     # Files
     (mkKeymap "n" "<leader>fb" "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>" "Buffers")
     (mkKeymap "n" "<leader>B" "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>" "Buffers")
+    (mkKeymap "n" "<leader><space>" "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>" "Buffers")
     (mkKeymap "n" "<leader>ff" "<cmd>Telescope find_files<cr>" "Files")
     (mkKeymap "n" "<leader>fg" "<cmd>Telescope git_files<cr>" "Git Files")
     (mkKeymap "n" "<leader>fr" "<cmd>Telescope oldfiles<cr>" "Recent Files")
